@@ -11,8 +11,7 @@ spec:
     - component: DataGrid
       name: dataGrid
       props:
-        dataProviderId: dataProvider.ts:default
-        rowsSource: dataProvider
+        dataProviderId: songProvider.ts:default
         columns:
           - field: song_id
             type: number
@@ -20,5 +19,6 @@ spec:
             type: string
         rowIdField: song_id
         density: compact
+        rowsSource: dataProvider
       layout:
         height: 360

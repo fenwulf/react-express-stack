@@ -9,13 +9,16 @@ export default createDataProvider({
         params: { start, pageSize },
       });
 
+      const records = response.data.data || [];
+      const totalCount = response.data.totalCount || 0;
+
       return {
-        records: response.data.data,
-        totalCount: response.data.totalCount,
+        records,
+        totalCount,
       };
     } catch (error) {
       console.error("Error fetching artists:", error);
-      return { records: [] };
+      return { records: [], totalCount: 0 };
     }
   },
 });
