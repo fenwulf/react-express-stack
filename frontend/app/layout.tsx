@@ -3,6 +3,8 @@ import { AppProvider } from '@toolpad/core/nextjs';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import AttributionIcon from '@mui/icons-material/Attribution';
+import AlbumIcon from '@mui/icons-material/Album';
 import type { Navigation } from '@toolpad/core';
 
 import theme from '../theme';
@@ -21,6 +23,16 @@ const NAVIGATION: Navigation = [
     segment: 'songs',
     title: 'Songs',
     icon: <MusicNoteIcon />,
+  },
+  {
+    segment: 'albums',
+    title: 'Albums',
+    icon: <AlbumIcon />,
+  },
+  {
+    segment: 'artists',
+    title: 'Artists',
+    icon: <AttributionIcon />,
   },
 ];
 
