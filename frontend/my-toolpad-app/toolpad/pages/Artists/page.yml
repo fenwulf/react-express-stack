@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/toolpad/v0.8.1/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  alias:
+    - 51jw1-i
+  title: Artists
+  content:
+    - component: DataGrid
+      name: dataGrid
+      props:
+        rowsSource: dataProvider
+        dataProviderId: artistProvider.ts:default
+        columns:
+          - field: artist_id
+            type: number
+          - field: artist_name
+            type: string
+          - field: is_alive
+            type: number
+        rowIdField: artist_id

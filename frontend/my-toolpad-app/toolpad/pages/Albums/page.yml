@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mui/toolpad/v0.8.1/docs/schemas/v1/definitions.json#properties/Page
+
+apiVersion: v1
+kind: page
+spec:
+  title: Albums
+  display: shell
+  authorization:
+    allowAll: true
+  displayName: Albums
+  content:
+    - component: DataGrid
+      name: dataGrid
+      props:
+        rowsSource: dataProvider
+        dataProviderId: albumProvider.ts:default
+        columns:
+          - field: album_id
+            type: number
+          - field: album_name
+            type: string
+          - field: release_date
+            type: date
+        rowIdField: album_id
