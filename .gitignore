@@ -1,4 +1,4 @@
 .DS_Store
 frontend/node_modules/
-backend/node_modules/
+backend/my-toolpad-app/node_modules/
 .next/
