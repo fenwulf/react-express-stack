@@ -22,3 +22,33 @@ spec:
         rowsSource: dataProvider
       layout:
         height: 360
+    - component: Text
+      name: text
+      props:
+        value: Add Song
+    - component: Form
+      name: form
+      props:
+        hasResetButton: false
+        formControlsFullWidth: false
+        submitButtonText: Add Song
+      children:
+        - component: Container
+          name: container
+          children:
+            - component: PageRow
+              name: pageRow
+              props:
+                justifyContent: start
+              children:
+                - component: TextField
+                  name: textFieldSongTitle
+                  props:
+                    label: Song title
+                    placeholder: Title of song
+                    name: song_title
+                    size: small
+                    isRequired: true
+                - component: codeComponent.MyComponent
+                  name: dynamicAutoCompleteNumArtistSelect
+  maxWidth: lg
